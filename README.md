@@ -41,7 +41,7 @@ wget https://github.com/google/googletest/archive/release-1.8.1.tar.gz
 
 tar xvf release-1.8.1.tar.gz
 
-## Kompilacja
+# Kompilacja (make)
 
 Przejrzyj plik Makefile
 
