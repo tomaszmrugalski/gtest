@@ -13,7 +13,7 @@ Komendy można kopiować myszką. Zaznacz lewym przyciskiem, wklej środkowym.
 Pobierz repozytorium za pomocą gita i umieść lokalną kopię w katalogu lab4
 
 ```console
-git clone https://github.com/tomaszmrugalski/gtest-demo lab4
+git clone https://github.com/tomaszmrugalski/gtest lab4
 ```
 
 ### Pobranie CUnit
