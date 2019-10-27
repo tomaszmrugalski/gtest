@@ -1,15 +1,16 @@
 # Podstawy
-### wyświetlenie tego pliku
+
+Wyświetlenie tego pliku w konsoli:
 
 ```console
 cat info.txt
 ```
 
-### Komendy można kopiować myszką. Zaznacz lewym przyciskiem, wklej środkowym
+Komendy można kopiować myszką. Zaznacz lewym przyciskiem, wklej środkowym.
 
 ### Pobranie źródeł
-### Pobierz repozytorium za pomocą gita i umieść lokalną kopię w
-### katalogu lab4
+
+Pobierz repozytorium za pomocą gita i umieść lokalną kopię w katalogu lab4
 
 ```console
 git clone https://github.com/tomaszmrugalski/gtest-demo lab4
@@ -33,53 +34,60 @@ make install
 ```
 
 ### Pobranie google test (gtest)
+
 wget https://github.com/google/googletest/archive/release-1.8.1.tar.gz
 
 ### Rozpakowanie (kompilacja nie jest konieczna!)
+
 tar xvf release-1.8.1.tar.gz
 
 ## Kompilacja
-### Przejrzyj plik Makefile
+
+Przejrzyj plik Makefile
+
 cat Makefile
 
 ### Zbuduj testy gtests
+
 make gtests
 
 ### Zbuduj testy ctests
+
 make ctests
 
 ### Uruchom wszystkie testy
+
 make check
 
-# Zbuduj wszystko
+### Zbuduj wszystko
 make all
 
-# Ogarnij ten syf
+### Ogarnij ten syf
 make clean
 
-# Informacje o makrach gtest
+### Informacje o makrach gtest
 https://github.com/google/googletest/blob/master/googletest/docs/primer.md
 
-# Kilka użytecznych komend git
+# git - kilka użytecznych komend
 
-# Pokaż, które pliki się lokalnie zmieniły
+### Pokaż, które pliki się lokalnie zmieniły
 git status
 
-# Pokaż różnice wprowadzone lokalnie
+### Pokaż różnice wprowadzone lokalnie
 git diff
 git diff plik1.cc
 
-# Jeżeli zmiany sa ok, możemy je wcheckinować
+### Jeżeli zmiany sa ok, możemy je wcheckinować
 git add zmieniony-plik.cc
 git commit -m "Poprawilem test na silnie"
 
-# Jeżeli jednak zmiany nie są ok, to można je cofnąć
+### Cofanie zmian
 git status
 git checkout zmieniony-plik.cc
 
-# Jeżeli kompletnie wszystko zawiedzie, można całkowie odrzucić
-# lokalne zmiany:
+### Odrzucanie wszystkich zmian
+
 git reset --hard
 
-# I do tego jeszcze wywalić wszystko, co nie jest pod kontrolą gita
+### Wywal wszystko, co nie jest pod kontrolą gita
 git clean -fxd
