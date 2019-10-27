@@ -21,7 +21,7 @@ gtests:	calc.cc calc.h libgtest.a gtests.cc
 	$(CXX) calc.cc gtests.cc libgtest.a -o gtests -I${GTEST_DIR}/include -pthread
 
 libgtest.a: $(GTEST_DIR)/src/gtest-all.cc ${GTEST_DIR}/src/gtest_main.cc
-	g++ -isystem -I${GTEST_DIR}/include -I${GTEST_DIR} \
+	g++ -I${GTEST_DIR}/include -I${GTEST_DIR} \
 		-pthread -c ${GTEST_DIR}/src/gtest-all.cc ${GTEST_DIR}/src/gtest_main.cc
 	ar -rv libgtest.a gtest-all.o gtest_main.o
 
