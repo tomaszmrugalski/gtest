@@ -1,9 +1,8 @@
-#include "facutil.h"
+#include "calc.h"
 #include <limits.h>
 
 #include "CUnit/CUnit.h"
-
-
+#include "CUnit/Basic.h"
 
 void test_fac(void) {
   CU_ASSERT(fac(1) == 1);

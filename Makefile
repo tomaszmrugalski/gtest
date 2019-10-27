@@ -1,28 +1,25 @@
-all: fac tests
+all: fac gtests
 
-CUNIT_PATH=/home/student/lab3/cunit
-GTEST_PATH=/home/student/lab4/gtest
+CUNIT_DIR=/home/thomson/lab3/cunit
+GTEST_DIR=/home/thomson/lab4/googletest-release-1.8.1/googletest
 
-facutil.o: facutil.c facutil.h
-	$(CC) -c facutil.c -o facutil.o
-
-fac:	fac.c facutil.o
-	$(CC) fac.c facutil.o -o fac
+fac:	fac.c calc.cc
+	$(CXX) fac.c calc.cc -o fac
 
 clean:
-	rm -f fac facutil
+	rm -f fac gtests ctests *.o *.a
 
-ctests: tests.c facutil.c facutil.h
-	$(CC) facutil.c tests.c -o ctests \
-            -I$(CUNIT_DIR)/include \
-            -lcunit -L$(CUNIT_DIR)/lib
+ctests: ctests.cc calc.cc calc.h
+	$(CXX) calc.cc ctests.cc -o ctests \
+	    -I$(CUNIT_DIR)/include \
+	    -lcunit -L$(CUNIT_DIR)/lib
 
-gtests:	facutil.c facutil.h libgtest.a gtests.c
-	$(CXX) facutil.c gtests.c libgtest.a -o gtests -I$(GTEST_DIR) -pthread
+gtests:	calc.cc calc.h libgtest.a gtests.cc
+	$(CXX) calc.cc gtests.cc libgtest.a -o gtests -I$(GTEST_DIR) -pthread
 
 libgtest.a: $(GTEST_DIR)/src/gtest-all.cc ${GTEST_DIR}/src/gtest_main.cc
 	g++ -isystem ${GTEST_DIR}/include -I${GTEST_DIR} \
-	        -pthread -c ${GTEST_DIR}/src/gtest-all.cc ${GTEST_DIR}/src/gtest_main.cc
+		-pthread -c ${GTEST_DIR}/src/gtest-all.cc ${GTEST_DIR}/src/gtest_main.cc
 	ar -rv libgtest.a gtest-all.o gtest_main.o
 
 
