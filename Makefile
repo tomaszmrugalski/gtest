@@ -1,4 +1,4 @@
-all: fac gtests
+all: fac gtests ctests
 
 CUNIT_DIR=/home/thomson/lab3/cunit
 GTEST_DIR=/home/thomson/lab4/googletest-release-1.8.1/googletest
