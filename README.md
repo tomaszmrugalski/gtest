@@ -1,44 +1,54 @@
-# Podstawy podstaw
-# wyświetlenie tego pliku
+# Podstawy
+### wyświetlenie tego pliku
+
+```console
 cat info.txt
+```
 
-# Komendy można kopiować myszką. Zaznacz lewym przyciskiem, wklej środkowym
+### Komendy można kopiować myszką. Zaznacz lewym przyciskiem, wklej środkowym
 
-# Pobranie źródeł
-# Pobierz repozytorium za pomocą gita i umieść lokalną kopię w
-# katalogu lab4
+### Pobranie źródeł
+### Pobierz repozytorium za pomocą gita i umieść lokalną kopię w
+### katalogu lab4
 
+```console
 git clone https://github.com/tomaszmrugalski/gtest-demo lab4
+```
 
-# Pobranie CUnit
+### Pobranie CUnit
 
+```console
 wget -nd https://downloads.sourceforge.net/project/cunit/CUnit/2.1-3/CUnit-2.1-3.tar.bz2
+```
 
-# Rozpakowanie, kompilacja i instalacja
+### Rozpakowanie, kompilacja i instalacja
+
+```console
 tar xvf CUnit-2.1-3.tar.bz2
 cd CUnit-2.1-3
 autoreconf -i
 ./configure --prefix=/home/student/lab3/cunit
 make -j5
 make install
+```
 
-# Pobranie google test (gtest)
+### Pobranie google test (gtest)
 wget https://github.com/google/googletest/archive/release-1.8.1.tar.gz
 
-# Rozpakowanie (kompilacja nie jest konieczna!)
+### Rozpakowanie (kompilacja nie jest konieczna!)
 tar xvf release-1.8.1.tar.gz
 
-# Kompilacja
-# Przejrzyj plik Makefile
+## Kompilacja
+### Przejrzyj plik Makefile
 cat Makefile
 
-# Zbuduj testy gtests
+### Zbuduj testy gtests
 make gtests
 
-# Zbuduj testy ctests
+### Zbuduj testy ctests
 make ctests
 
-# Uruchom wszystkie testy
+### Uruchom wszystkie testy
 make check
 
 # Zbuduj wszystko
