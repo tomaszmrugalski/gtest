@@ -18,8 +18,6 @@ make -j5
 make install
 
 # Pobranie google test (gtest)
-wget https://github.com/google/googletest/archive/release-1.10.0.tar.gz
-
 wget https://github.com/google/googletest/archive/release-1.8.1.tar.gz
 
 # Rozpakowanie (kompilacja nie jest konieczna!)

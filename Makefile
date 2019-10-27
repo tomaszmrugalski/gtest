@@ -1,7 +1,7 @@
 all: fac gtests ctests
 
-CUNIT_DIR=/home/thomson/lab3/cunit
-GTEST_DIR=/home/thomson/lab4/googletest-release-1.8.1/googletest
+CUNIT_DIR=/home/student/lab3/cunit
+GTEST_DIR=/home/student/lab4/googletest-release-1.8.1/googletest
 
 fac:	fac.c calc.cc
 	$(CXX) fac.c calc.cc -o fac
@@ -15,10 +15,10 @@ ctests: ctests.cc calc.cc calc.h
 	    -lcunit -L$(CUNIT_DIR)/lib
 
 gtests:	calc.cc calc.h libgtest.a gtests.cc
-	$(CXX) calc.cc gtests.cc libgtest.a -o gtests -I$(GTEST_DIR) -pthread
+	$(CXX) calc.cc gtests.cc libgtest.a -o gtests -I$(GTEST_DIR)/include -pthread
 
 libgtest.a: $(GTEST_DIR)/src/gtest-all.cc ${GTEST_DIR}/src/gtest_main.cc
-	g++ -isystem ${GTEST_DIR}/include -I${GTEST_DIR} \
+	g++ -isystem -I${GTEST_DIR}/include -I${GTEST_DIR} \
 		-pthread -c ${GTEST_DIR}/src/gtest-all.cc ${GTEST_DIR}/src/gtest_main.cc
 	ar -rv libgtest.a gtest-all.o gtest_main.o
 
