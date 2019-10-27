@@ -5,7 +5,6 @@
 #include <exception>
 #include <stdexcept>
 
-
 /// @brief Calculates factorial (pl. silnia).
 /// @param n
 /// @return n!
@@ -27,9 +26,11 @@ int sum(int a, int b) {
     return a + b;
 }
 
-
-// Task 1: Implement a method that will take two integers and will
-// return the distance between them.
+// Task 1: Implement a function that will take two integers and will
+// return the distance between them. The function is supposed to work
+// for the whole integer range. If the distance is too large to be
+// stored on int, maximum int value should be returned.
+// Don't forget to update calc.cc and calc.h.
 
 // Task 2: Implement unit-tests for that method.
 
@@ -39,4 +40,4 @@ int sum(int a, int b) {
 
 // Task 5: Disable one test in the source code.
 
-// Task 6: Run all unit-tests from Math test suite.
+// Task 6: Run all unit-tests from Math test suite
