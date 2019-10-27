@@ -27,5 +27,5 @@ libgtest.a: $(GTEST_DIR)/src/gtest-all.cc ${GTEST_DIR}/src/gtest_main.cc
 
 
 check: ctests gtests
-	LD_LIBRARY_PATH=$(CUNIT_PATH)/lib ./tests
+	LD_LIBRARY_PATH=$(CUNIT_PATH)/lib ./ctests
 	./gtests
