@@ -3,8 +3,11 @@ all: fac gtests ctests
 CUNIT_DIR=/home/student/lab3/cunit
 GTEST_DIR=/home/student/lab4/googletest-release-1.8.1/googletest
 
+# CXX is automatically set to g++
+CPPFLAGS=-g -pedantic -Wall
+
 fac:	fac.c calc.cc
-	$(CXX) fac.c calc.cc -o fac
+	$(CXX) $(CPPFLAGS) fac.c calc.cc -o fac
 
 clean:
 	rm -f fac gtests ctests *.o *.a
@@ -25,3 +28,4 @@ libgtest.a: $(GTEST_DIR)/src/gtest-all.cc ${GTEST_DIR}/src/gtest_main.cc
 
 check: ctests gtests
 	LD_LIBRARY_PATH=$(CUNIT_PATH)/lib ./tests
+	./gtests
