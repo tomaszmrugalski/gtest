@@ -3,7 +3,7 @@
 Wyświetlenie tego pliku w konsoli:
 
 ```console
-cat info.txt
+cat README.md
 ```
 
 Komendy można kopiować myszką. Zaznacz lewym przyciskiem, wklej środkowym.
