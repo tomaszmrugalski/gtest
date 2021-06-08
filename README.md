@@ -45,25 +45,39 @@ tar xvf release-1.8.1.tar.gz
 
 Przejrzyj plik Makefile
 
+```
 cat Makefile
+```
 
 ### Zbuduj testy gtests
 
+```
 make gtests
+```
 
 ### Zbuduj testy ctests
 
+```
 make ctests
+```
 
 ### Uruchom wszystkie testy
 
+```
 make check
+```
 
 ### Zbuduj wszystko
+
+```
 make all
+```
 
 ### Ogarnij ten syf
+
+```
 make clean
+```
 
 ### Informacje o makrach gtest
 https://github.com/google/googletest/blob/master/googletest/docs/primer.md
@@ -71,23 +85,39 @@ https://github.com/google/googletest/blob/master/googletest/docs/primer.md
 # git - kilka użytecznych komend
 
 ### Pokaż, które pliki się lokalnie zmieniły
+```
 git status
+```
 
 ### Pokaż różnice wprowadzone lokalnie
+
+```
 git diff
 git diff plik1.cc
+```
 
 ### Jeżeli zmiany sa ok, możemy je wcheckinować
+
+```
 git add zmieniony-plik.cc
 git commit -m "Poprawilem test na silnie"
+```
 
 ### Cofanie zmian
+
+```
 git status
 git checkout zmieniony-plik.cc
+```
 
 ### Odrzucanie wszystkich zmian
 
+```
 git reset --hard
+```
 
 ### Wywal wszystko, co nie jest pod kontrolą gita
+
+```
 git clean -fxd
+```
